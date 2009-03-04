@@ -39,7 +39,7 @@ module Lightline
       
       options[:q] = args[0]
       
-      Lightline.go(options[:q])
+      Lightline.query(options[:q])
     end
   end
 end
