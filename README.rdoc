@@ -1,13 +1,14 @@
 = lightline
 
+NOTE: this is alpha software and is very likely in a non-fully-functional, unstable state.
+
 == DESCRIPTION:
 
 Commandline interface for viewing Lighthouse tickets
 
 == SETUP:
 
-Create a config.yml file in lib/config
-Within config.yml update:
+Create a yaml file .lightline in your home directory, ~/.lightline. Within lightline update:
   account - to your lighthouse account, this is the subdomain in your lighthouse url
   project - to the lighthouse project you want to access tickets information from
   token   - to a token that has at least read permission for your project and account
