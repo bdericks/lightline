@@ -1,12 +1,14 @@
 require 'lighthouse-api'
+require 'yaml'
 
 module Lightline
   include Lighthouse
   def self.query(q)
-    Lighthouse.account = ''
-    Lighthouse.token = ""
+    config = YAML.load_file('lib/config/config.yml')
+    Lighthouse.account = config["lighthouse"]["account"]
+    Lighthouse.token = config["lighthouse"]["token"]
 
-    tickets = Project.find(:first, :name => 'copilot').tickets(:q => "#{q}")
+    tickets = Project.find(:first, :name => config["lighthouse"]["project"]).tickets(:q => "#{q}")
 
     cols = [
      {:attr => :number, :title => "#", :data => []},
