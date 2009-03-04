@@ -1,6 +1,4 @@
-lightline
-    by Ben Erickson
-    benerickson.com
+= lightline
 
 == DESCRIPTION:
 
